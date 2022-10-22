@@ -1,16 +1,11 @@
 def Fibonacci(number):
-    first = 0
-    second = 1
-    list_fib = []
-    list_fib.append(first)
-    list_fib.append(second)
+
+    list_fib = [0, 1]
 
     for i in range(2, number):
-        list_fib.append(first + second)
-        first = second
-        second = list_fib[i]
+        list_fib.append(list_fib[i-1] + list_fib[i-2])
 
     return list_fib
 
 
-print(Fibonacci(4))
+print(Fibonacci(9))
